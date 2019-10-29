@@ -17,6 +17,7 @@ export class RecipeService {
     )
   ];
 
+  // Gets a copy of the recipes array using .slice()
   getRecipes() {
     return this.recipes.slice();
   }
