@@ -12,6 +12,11 @@ export class ShoppingListService {
     return this.ingredients.slice();
   }
 
+  /**
+   *
+   * @param ingredient The ingredient to be added
+   * Added a single ingredient to the ingredient list
+   */
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
 
@@ -19,6 +24,9 @@ export class ShoppingListService {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  /**
+   * Adds an array of ingredients to the ingredient list
+   */
   addIngredients(ingredients: Ingredient[]) {
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.emit(this.ingredients.slice());
